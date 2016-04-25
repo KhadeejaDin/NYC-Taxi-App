@@ -1,0 +1,18 @@
+declared-services:
+  natural-language-classifier-standard:
+    label: natural_language_classifier
+    plan: standard
+applications:
+- services:
+  - natural-language-classifier-service  #using standard nlc services
+  name: natural-language-classifier-nyc-taxi-app
+  command: npm start    #npm: node package manager. it allows to install dependencies. npm start my application. it reads the server file and executes it accordingly
+  path: .
+  memory: 512M
+
+
+#manifest tells bluemix that read this and configure accordingly: allocate this much memory. what plan you want for your classifier. application name. it allows you to scale.
+#helps you deploy and allocate accordingly
+
+#we set up our tardet api as bluemix and have logged in to our dashboard
+#create an instance: your own nl classifier
